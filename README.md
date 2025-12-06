@@ -1,5 +1,7 @@
 # Multiplatform Uikit
 
+[![](https://jitpack.io/v/cagdasc/multiplatform-uikit.svg)](https://jitpack.io/#cagdasc/multiplatform-uikit)
+
 Multiplatform Uikit is a comprehensive UI component library for building cross-platform applications with a consistent
 look and feel. It provides a wide range of customizable UI elements that can be easily integrated into your projects,
 whether you're developing for web, mobile, or desktop platforms.

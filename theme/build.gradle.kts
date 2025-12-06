@@ -78,7 +78,6 @@ compose.resources {
 
 publishing {
     publications.withType<MavenPublication> {
-        artifactId = "uikit-theme"
         pom {
             name.set("multiplatform-uikit-theme")
             description.set("A theming library for multiplatform Compose UI applications.")
