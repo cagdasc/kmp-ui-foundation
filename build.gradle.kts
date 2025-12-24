@@ -7,3 +7,8 @@ plugins {
     alias(libs.plugins.jetbrains.kotlin.android) apply false
     alias(libs.plugins.kotlin.multiplatform) apply false
 }
+
+allprojects {
+    group = "com.github.cagdasc"
+    version = "0.0.1"
+}

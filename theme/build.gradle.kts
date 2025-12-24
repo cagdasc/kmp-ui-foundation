@@ -1,4 +1,5 @@
 import org.jetbrains.kotlin.gradle.ExperimentalKotlinGradlePluginApi
+import org.jetbrains.kotlin.gradle.dsl.JvmTarget
 
 plugins {
     alias(libs.plugins.kotlin.multiplatform)
@@ -9,8 +10,21 @@ plugins {
 }
 
 kotlin {
-    jvm()
-    androidTarget()
+    jvmToolchain(21)
+    androidTarget {
+        publishLibraryVariants("release")
+
+        @OptIn(ExperimentalKotlinGradlePluginApi::class)
+        compilerOptions {
+            jvmTarget.set(JvmTarget.JVM_21)
+        }
+    }
+
+    jvm {
+        compilerOptions {
+            jvmTarget.set(JvmTarget.JVM_21)
+        }
+    }
 
     sourceSets {
         androidMain.dependencies {
@@ -77,10 +91,15 @@ compose.resources {
 }
 
 publishing {
-    publications.withType<MavenPublication> {
-        pom {
-            name.set("multiplatform-uikit-theme")
-            description.set("A theming library for multiplatform Compose UI applications.")
+    publications {
+        create<MavenPublication>("maven") {
+            groupId = project.group.toString()
+            artifactId = "theme"
+            version = project.version.toString()
+
+            afterEvaluate {
+                from(components["kotlin"])
+            }
         }
     }
 }
