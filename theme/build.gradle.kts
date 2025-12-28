@@ -27,9 +27,6 @@ kotlin {
     }
 
     sourceSets {
-        androidMain.dependencies {
-        }
-
         val commonMain by getting {
             dependencies {
                 implementation(compose.ui)
@@ -42,10 +39,6 @@ kotlin {
                 implementation(compose.components.uiToolingPreview)
                 implementation(compose.uiTooling)
             }
-        }
-
-        jvmMain.dependencies {
-
         }
     }
 

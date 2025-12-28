@@ -9,6 +9,6 @@ plugins {
 }
 
 allprojects {
-    group = "com.github.cagdasc"
-    version = "0.0.1"
+    group = "com.github.cagdasc.kmp-ui-foundation"
+    version = "0.1.0"
 }
