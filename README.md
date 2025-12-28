@@ -1,4 +1,4 @@
-# KMP UI Foundation [![](https://jitpack.io/v/cagdasc/multiplatform-uikit.svg)](https://jitpack.io/#cagdasc/kmp-ui-foundation)
+# KMP UI Foundation [![](https://jitpack.io/v/cagdasc/kmp-ui-foundation.svg)](https://jitpack.io/#cagdasc/kmp-ui-foundation)
 
 ![Kotlin multiplatform](https://img.shields.io/badge/Kotlin-Multiplatform-blueviolet?style=for-the-badge)
 ![Android](https://img.shields.io/badge/Android-supported-brightgreen?style=for-the-badge)
