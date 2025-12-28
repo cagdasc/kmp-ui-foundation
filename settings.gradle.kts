@@ -23,5 +23,5 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "uikit"
+rootProject.name = "kmp-ui-foundation"
 include(":theme")

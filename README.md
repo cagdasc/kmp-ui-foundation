@@ -1,20 +1,52 @@
-# Multiplatform Uikit
+# KMP UI Foundation [![](https://jitpack.io/v/cagdasc/multiplatform-uikit.svg)](https://jitpack.io/#cagdasc/kmp-ui-foundation)
 
-[![](https://jitpack.io/v/cagdasc/multiplatform-uikit.svg)](https://jitpack.io/#cagdasc/multiplatform-uikit)
+![Kotlin multiplatform](https://img.shields.io/badge/Kotlin-Multiplatform-blueviolet?style=for-the-badge)
+![Android](https://img.shields.io/badge/Android-supported-brightgreen?style=for-the-badge)
+![JVM](https://img.shields.io/badge/JVM-supported-brightgreen?style=for-the-badge)
 
-Multiplatform Uikit is a comprehensive UI component library for building cross-platform applications with a consistent
-look and feel. It provides a wide range of customizable UI elements that can be easily integrated into your projects,
-whether you're developing for web, mobile, or desktop platforms.
+A Kotlin Multiplatform **UI foundation library** focused on **theming and visual consistency** across platforms.
 
-## Purpose
+This repository contains **UI-only modules**. It intentionally depends on a separate **platform foundation project** for
+platform abstractions, coroutines, and dependency injection.
 
-This library was created to be a single, shared source of truth for UI components across multiple projects. The primary
-goal is to follow the "Don't Repeat Yourself" (DRY) principle. By centralizing our UI components, we can:
+The goal of this project is to provide a **shared, reusable UI base layer** that can be consumed by multiple
+applications.
 
-## Theme
+---
 
-The `theme` module is the heart of the visual identity of your applications. It provides a centralized configuration for
-a consistent look and feel.
+## Modules Overview
+
+### `theme`
+
+Cross-platform theming primitives and design tokens.
+
+**Responsibilities**:
+
+* Define colors, typography, shapes, spacing, and other design tokens
+* Provide a consistent theming API across platforms
+* Act as the base layer for higher-level UI components
+
+---
+
+## Module Usage
+
+```kotlin
+dependencies {
+    implementation("com.github.cagdasc.kmp-ui-foundation:<version>")
+}
+```
+
+---
+
+## Future Scope
+
+Planned additions may include:
+
+* Additional theme modules (tokens, typography variants)
+* Shared UI primitives (non-feature components)
+* Expanded platform target support
+
+---
 
 ## License
 
