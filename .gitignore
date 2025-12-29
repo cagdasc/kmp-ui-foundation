@@ -9,6 +9,7 @@ gradle-app.setting
 # gradlew.bat
 # gradlew
 local.properties
+.kotlin/**
 
 # Android Studio / IntelliJ IDEA files
 *.iml

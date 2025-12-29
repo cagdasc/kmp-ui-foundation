@@ -3,6 +3,9 @@
 ![Kotlin multiplatform](https://img.shields.io/badge/Kotlin-Multiplatform-blueviolet?style=for-the-badge)
 ![Android](https://img.shields.io/badge/Android-supported-brightgreen?style=for-the-badge)
 ![JVM](https://img.shields.io/badge/JVM-supported-brightgreen?style=for-the-badge)
+![WASM-JS](https://img.shields.io/badge/WASMJS-supported-brightgreen?style=for-the-badge)
+
+**Website:** https://cagdasc.github.io/kmp-ui-foundation
 
 A Kotlin Multiplatform **UI foundation library** focused on **theming and visual consistency** across platforms.
 
@@ -32,7 +35,7 @@ Cross-platform theming primitives and design tokens.
 
 ```kotlin
 dependencies {
-    implementation("com.github.cagdasc.kmp-ui-foundation:<version>")
+    implementation("com.github.cagdasc.kmp-ui-foundation:theme:<version>")
 }
 ```
 
