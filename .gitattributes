@@ -1,0 +1,15 @@
+# WebAssembly
+*.wasm binary
+
+# JavaScript
+*.js text eol=lf
+*.mjs text eol=lf
+*.css text eol=lf
+*.html text eol=lf
+
+# Kotlin / Gradle
+*.kt text eol=lf
+*.kts text eol=lf
+
+# General
+* text=auto

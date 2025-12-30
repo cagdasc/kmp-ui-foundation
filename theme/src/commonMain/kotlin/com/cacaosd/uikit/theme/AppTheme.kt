@@ -8,9 +8,13 @@ import androidx.compose.runtime.CompositionLocalProvider
 import androidx.compose.runtime.staticCompositionLocalOf
 import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
+import com.cacaosd.uikit.theme.config.ColorSchemeProvider
+import com.cacaosd.uikit.theme.config.DefaultColorSchemeProvider
 import com.cacaosd.uikit.theme.typography.appTypography
 
 object AppTheme {
+    var colorSchemeProvider: ColorSchemeProvider = DefaultColorSchemeProvider()
+
     val shapes: AppShapes
         @Composable
         get() = LocalAppShapes.current
@@ -25,8 +29,8 @@ object AppTheme {
         content: @Composable () -> Unit
     ) {
         val colorScheme = LocalAppDarkThemePreview.current?.let { isDarkTheme ->
-            if (isDarkTheme) darkSchema else lightSchema
-        } ?: if (isDarkTheme) darkSchema else lightSchema
+            if (isDarkTheme) colorSchemeProvider.darkColorScheme else colorSchemeProvider.lightColorScheme
+        } ?: if (isDarkTheme) colorSchemeProvider.darkColorScheme else colorSchemeProvider.lightColorScheme
 
         CompositionLocalProvider(
             LocalAppShapes provides appShapes,

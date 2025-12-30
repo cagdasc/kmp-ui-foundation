@@ -1,4 +1,5 @@
 import org.jetbrains.kotlin.gradle.ExperimentalKotlinGradlePluginApi
+import org.jetbrains.kotlin.gradle.ExperimentalWasmDsl
 import org.jetbrains.kotlin.gradle.dsl.JvmTarget
 
 plugins {
@@ -26,18 +27,22 @@ kotlin {
         }
     }
 
+    @OptIn(ExperimentalWasmDsl::class)
+    wasmJs {
+        outputModuleName = "kmp_ui_foundation_theme.js"
+        browser()
+    }
+
     sourceSets {
         val commonMain by getting {
             dependencies {
                 implementation(compose.ui)
                 implementation(compose.material3)
                 implementation(compose.materialIconsExtended)
-                implementation(compose.preview)
                 implementation(compose.animation)
                 implementation(compose.components.resources)
                 implementation(compose.foundation)
                 implementation(compose.components.uiToolingPreview)
-                implementation(compose.uiTooling)
             }
         }
     }

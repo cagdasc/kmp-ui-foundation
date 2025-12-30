@@ -4,7 +4,7 @@ import androidx.compose.material3.darkColorScheme
 import androidx.compose.material3.lightColorScheme
 import androidx.compose.ui.graphics.Color
 
-val lightSchema = lightColorScheme(
+internal val lightSchema = lightColorScheme(
     // Primary colors
     primary = Color(0xFF388E3C),         // Using the ItemSelected green as primary
     onPrimary = Color(0xFFFFFFFF),       // White text on primary
@@ -52,7 +52,7 @@ val lightSchema = lightColorScheme(
     scrim = Color(0xFF000000)            // Scrim is typically black
 )
 
-val darkSchema = darkColorScheme(
+internal val darkSchema = darkColorScheme(
     // Primary colors
     primary = Color(0xFFA5D6A7),         // Light green accent
     onPrimary = Color(0xFF00390D),       // Very dark green text on primary
