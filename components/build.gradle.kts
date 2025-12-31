@@ -29,20 +29,21 @@ kotlin {
 
     @OptIn(ExperimentalWasmDsl::class)
     wasmJs {
-        outputModuleName = "kmp_ui_foundation_theme.js"
+        outputModuleName = "kmp_ui_foundation_components.js"
         browser()
     }
 
     sourceSets {
         val commonMain by getting {
             dependencies {
-                implementation(compose.ui)
-                implementation(compose.material3)
-                implementation(compose.materialIconsExtended)
-                implementation(compose.animation)
-                implementation(compose.components.resources)
+                implementation(compose.runtime)
                 implementation(compose.foundation)
+                implementation(compose.material3)
                 implementation(compose.components.uiToolingPreview)
+                implementation(compose.preview)
+                implementation(compose.uiTooling)
+
+                implementation("com.github.cagdasc.kmp-ui-foundation:theme:${project.version}")
             }
         }
     }
@@ -54,7 +55,7 @@ kotlin {
 }
 
 android {
-    namespace = "com.cacaosd.kmp_ui_foundation.theme"
+    namespace = "com.cacaosd.kmp_ui_foundation.components"
     compileSdk = libs.versions.compileSdk.get().toInt()
 
     defaultConfig {
@@ -84,7 +85,7 @@ android {
 
 compose.resources {
     publicResClass = true
-    packageOfResClass = "com.cacaosd.kmp_ui_foundation.theme.resources"
+    packageOfResClass = "com.cacaosd.kmp_ui_foundation.components.resources"
     generateResClass = auto
 }
 
@@ -92,7 +93,7 @@ publishing {
     publications {
         create<MavenPublication>("maven") {
             groupId = project.group.toString()
-            artifactId = "theme"
+            artifactId = "components"
             version = project.version.toString()
 
             afterEvaluate {

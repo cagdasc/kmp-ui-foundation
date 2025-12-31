@@ -32,5 +32,12 @@ plugins {
 
 rootProject.name = "kmp-ui-foundation"
 include(":theme")
-
+include(":components")
 include("sample")
+
+includeBuild(".") {
+    dependencySubstitution {
+        substitute(module("com.github.cagdasc.kmp-ui-foundation:theme"))
+            .using(project(":theme"))
+    }
+}
