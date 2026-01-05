@@ -32,5 +32,6 @@ plugins {
 
 rootProject.name = "kmp-ui-foundation"
 include(":theme")
-
-include("sample")
+if (System.getenv().getOrDefault("JITPACK", "false") == "false") {
+    include("sample")
+}
